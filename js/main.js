@@ -101,7 +101,7 @@ var neighborhoodLayer = new L.GeoJSON(parse(addressAPINeighborhoods), {
 			$('#selection').text(JSON.stringify(e.layer.feature.properties));
             var neighborhoodname = encodeURIComponent(e.layer.feature.properties.name);
             var neighborhoodURL = "http://api.codeforkc.org//address-by-neighborhood/V0/" + neighborhoodname + "?city=&state=mo";
-            $("#neighborhoodapi_endpt").html("<a target='_blank' href='http://api.codeforkc.org//address-by-neighborhood/V0/Broadway%20Gillham?city=' + neighborhoodname + '&state=mo'>" + neighborhoodURL + "</a>");
+            $("#neighborhoodapi_endpt").html("<a target='_blank' href='" + neighborhoodURL + "''>" + neighborhoodURL + "</a>");
 		});
 
 		map.addControl(geoList);
